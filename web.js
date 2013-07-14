@@ -11,10 +11,11 @@ var fs = require('fs');
 });
 */
 
-tempStr = fs.readFile('./index.html');
+//tempStr = fs.readFile('./index.html');
 
-app.get('/', function(request, response, tempStr) {
-  response.send(tempStr.toString());
+app.get('/', function(request, response) {
+	tempStr = fs.readFile('./index.html');
+	response.send(tempStr.toString());
 });
 
 var port = process.env.PORT || 5000;
