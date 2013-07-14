@@ -4,11 +4,14 @@ var app = express.createServer(express.logger());
 
 var fs = require('fs');
 
-tempStr = fs.readFile('./index.html', function (err, data) {
+/*tempStr = fs.readFile('./index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
 	return data;
 });
+*/
+
+tempStr = fs.readFile('./index.html');
 
 app.get('/', function(request, response, tempStr) {
   response.send(tempStr.toString());
