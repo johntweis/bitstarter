@@ -10,7 +10,7 @@ tempStr = fs.readFile('./index.html', function (err, data) {
 	return data;
 });
 
-app.get('/', function(request, response, tempSt) {
+app.get('/', function(request, response, tempStr) {
   response.send(tempStr.toString());
 });
 
